@@ -1,8 +1,13 @@
 # btc-race-24h
 
-cbBTC 1-minute swing bot for make.fun bounty `btc-race-24h-20261117-0603`.
+[![make.fun · btc-race-24h-20261117-0603](https://make.fun/badge/btc-race-24h-20261117-0603.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+[![rank](https://make.fun/badge/btc-race-24h-20261117-0603/belaayi89-byte/btc-race-24h/rank.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+[![reward](https://make.fun/badge/btc-race-24h-20261117-0603/belaayi89-byte/btc-race-24h/reward.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
 
-Strategy: swing dip-buy with symmetric take-profit.
+cbBTC 1-minute swing bot for make.fun bounty
+[`btc-race-24h-20261117-0603`](https://make.fun/bounty/btc-race-24h-20261117-0603).
+
+## Strategy
 
 - While flat, track the running peak of 1-minute closes.
 - Buy with full equity at the next open when price is at least 1.5% below that peak.

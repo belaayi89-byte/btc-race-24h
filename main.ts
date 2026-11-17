@@ -11,12 +11,14 @@ const DIP_NUM = 985n; // 98.5% of the peak -> -1.5%
 const DIP_DEN = 1000n;
 const TP_NUM = 1015n; // +1.5% over entry
 const TP_DEN = 1000n;
-const RT_COST_NUM = 10026n; // one round trip costs ~26 bps: entry x 1.0026
+const RT_COST_NUM = 10026n; // one round trip ~26 bps (4 fee + 2 slip + ~7 impact each way)
 const RT_COST_DEN = 10000n;
 const MAX_SLIPPAGE_BPS = 100;
 
+/** Running peak of closes while flat; reset after each exit so the next entry needs a fresh high. */
 let peak = 0n;
-let entryCost = 0n; // estimated cost basis of the open position (quote units per whole position)
+/** Estimated cost basis of the open position, in quote units, for the take-profit check. */
+let entryCost = 0n;
 
 await runBars({
   onBatch(state: BarsState, batch) {
